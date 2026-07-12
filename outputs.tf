@@ -1,3 +1,7 @@
+output "oracle_autonomous_database_clone_from_backups_id" {
+  description = "Map of id values across all oracle_autonomous_database_clone_from_backups, keyed the same as var.oracle_autonomous_database_clone_from_backups"
+  value       = { for k, v in azurerm_oracle_autonomous_database_clone_from_backup.oracle_autonomous_database_clone_from_backups : k => v.id }
+}
 output "oracle_autonomous_database_clone_from_backups_admin_password" {
   description = "Map of admin_password values across all oracle_autonomous_database_clone_from_backups, keyed the same as var.oracle_autonomous_database_clone_from_backups"
   value       = { for k, v in azurerm_oracle_autonomous_database_clone_from_backup.oracle_autonomous_database_clone_from_backups : k => v.admin_password }
